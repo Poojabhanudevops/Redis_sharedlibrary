@@ -1,0 +1,6 @@
+---
+# vars file for redis
+# # OS-specific variables
+nginx_package:
+  "CentOS": "nginx"
+  "Ubuntu": "nginx"

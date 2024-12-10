@@ -1,0 +1,17 @@
+---
+# tasks file for redis
+# - name: Ensure nginx package is installed
+  ansible.builtin.package:
+    name: "{{ nginx_package[ansible_facts['os_family']] }}"
+    state: "{{ nginx_version }}"
+  when: ansible_facts['os_family'] in ["RedHat", "Debian"]
+
+- name: Configure nginx with template
+  ansible.builtin.template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart nginx
+

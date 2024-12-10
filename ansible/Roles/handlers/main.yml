@@ -1,0 +1,7 @@
+---
+# handlers file for redis
+# # Define handlers
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted

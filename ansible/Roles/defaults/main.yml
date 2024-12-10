@@ -1,0 +1,9 @@
+---
+# defaults file for redis
+# Default variables for the role
+nginx_version: "latest"
+nginx_user: "www-data"
+nginx_worker_processes: "auto"
+nginx_http_port: 80
+nginx_log_path: "/var/log/nginx/access.log"
+nginx_error_log_path: "/var/log/nginx/error.log"
